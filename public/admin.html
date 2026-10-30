@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREWVERSE | Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">BREW<span>VERSE</span></h2>
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <nav>
+            <a href="#dashboard">📊 Dashboard</a>
+            <a href="#add-product">➕ Add Product</a>
+            <a href="#manage-products">☕ Manage Products</a>
+            <a href="#orders">📦 Customer Orders</a>
+            <a href="index.html">🏠 Back to Website</a>
+        </nav>
+
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div>
+                <p>BREWVERSE ADMIN PANEL</p>
+                <h1>Dashboard Overview</h1>
+            </div>
+
+            <div class="admin-info">
+                <span>☕</span>
+                <div>
+                    <strong id="admin-name">Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard -->
+        <section id="dashboard">
+            <div class="welcome-section">
+                <h2>Welcome to Admin Dashboard!</h2>
+                <p>Manage your coffee shop products and customer orders.</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <p>Total Users</p>
+                    <h2 id="total-users">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Total Products</p>
+                    <h2 id="total-products">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Total Orders</p>
+                    <h2 id="total-orders">0</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Product -->
+        <section class="admin-section" id="add-product">
+            <div class="section-heading">
+                <p>PRODUCT MANAGEMENT</p>
+                <h2>Add New Coffee</h2>
+            </div>
+
+            <form id="product-form" class="product-form">
+                <div class="form-group">
+                    <label for="product-name">Product Name</label>
+                    <input type="text" id="product-name"
+                        placeholder="Enter coffee name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-description">Description</label>
+                    <textarea id="product-description"
+                        placeholder="Enter product description"
+                        rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-price">Price (₹)</label>
+                    <input type="number" id="product-price"
+                        placeholder="Enter price" min="1"
+                        step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-image">Image File Name or URL</label>
+                    <input type="text" id="product-image"
+                        placeholder="Example: latte.jpg">
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Add Product
+                </button>
+
+                <p id="product-message" class="message"></p>
+            </form>
+        </section>
+
+        <!-- Manage Products -->
+        <section class="admin-section" id="manage-products">
+            <div class="section-heading">
+                <p>AVAILABLE COFFEE</p>
+                <h2>Manage Products</h2>
+            </div>
+
+            <!-- Product Search -->
+            <div class="product-search">
+                <input
+                    type="text"
+                    id="product-search"
+                    placeholder="🔍 Search coffee by name..."
+                >
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="products-table">
+                        <tr>
+                            <td colspan="4">Loading products...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Edit Product Form -->
+        <section class="admin-section" id="edit-product-section" hidden>
+            <div class="section-heading">
+                <p>PRODUCT MANAGEMENT</p>
+                <h2>Edit Coffee Product</h2>
+            </div>
+
+            <form id="edit-product-form" class="product-form">
+
+                <input type="hidden" id="edit-product-id">
+
+                <div class="form-group">
+                    <label for="edit-product-name">Product Name</label>
+                    <input type="text" id="edit-product-name"
+                        placeholder="Enter coffee name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-product-description">Description</label>
+                    <textarea id="edit-product-description"
+                        placeholder="Enter product description"
+                        rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-product-price">Price (₹)</label>
+                    <input type="number" id="edit-product-price"
+                        placeholder="Enter price" min="1"
+                        step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-product-image">Image File Name or URL</label>
+                    <input type="text" id="edit-product-image"
+                        placeholder="Example: latte.jpg">
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Update Product
+                </button>
+
+                <button type="button" id="cancel-edit-btn"
+                    class="logout-btn">
+                    Cancel
+                </button>
+
+                <p id="edit-product-message" class="message"></p>
+            </form>
+        </section>
+
+        <!-- Customer Orders -->
+        <section class="admin-section" id="orders">
+            <div class="section-heading">
+                <p>CUSTOMER MANAGEMENT</p>
+                <h2>Customer Orders</h2>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Email</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="orders-table">
+                        <tr>
+                            <td colspan="9">Loading orders...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 BREWVERSE Admin Dashboard. All Rights Reserved.</p>
+        </footer>
+
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

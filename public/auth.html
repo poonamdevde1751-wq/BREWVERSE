@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREWVERSE - Account</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #24140e, #81512e);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px #0005;
+        }
+
+        h1 {
+            text-align: center;
+            color: #51301e;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            text-align: center;
+            color: #888;
+            margin-bottom: 25px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tabs button {
+            width: 50%;
+            padding: 12px;
+            border: none;
+            background: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tabs button.active {
+            background: #6c4026;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            background: #6c4026;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background: #a96532;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #6c4026;
+            text-decoration: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #welcome {
+            text-align: center;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>BREWVERSE</h1>
+        <p class="tagline">Your Perfect Coffee Destination</p>
+
+        <div id="auth-area">
+
+            <div class="tabs">
+                <button id="login-tab" class="active"
+                    onclick="showForm('login')">Login</button>
+
+                <button id="register-tab"
+                    onclick="showForm('register')">Register</button>
+            </div>
+
+            <form id="login-form">
+                <input type="email" id="login-email"
+                    placeholder="Email Address" required>
+
+                <input type="password" id="login-password"
+                    placeholder="Password" required>
+
+                <button class="submit-btn" type="submit">
+                    Login
+                </button>
+            </form>
+
+            <form id="register-form" class="hidden">
+                <input type="text" id="register-name"
+                    placeholder="Full Name" required>
+
+                <input type="email" id="register-email"
+                    placeholder="Email Address" required>
+
+                <input type="password" id="register-password"
+                    placeholder="Password (minimum 6 characters)"
+                    minlength="6" required>
+
+                <button class="submit-btn" type="submit">
+                    Create Account
+                </button>
+            </form>
+
+            <p id="message"></p>
+
+        </div>
+
+        <div id="welcome" class="hidden">
+            <h2>Welcome!</h2>
+            <p id="welcome-name"></p>
+            <button class="submit-btn" id="logout-btn">
+                Logout
+            </button>
+        </div>
+
+        <a href="index.html" class="home-link">
+            ← Back to Home
+        </a>
+
+    </div>
+
+    <script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | BREWVERSE</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <header class="profile-header">
+        <a href="index.html" class="logo">BREW<span>VERSE</span></a>
+        <a href="index.html" class="back-link">Back to Website</a>
+    </header>
+
+    <main class="profile-container">
+
+        <div class="profile-heading">
+            <p>MY ACCOUNT</p>
+            <h1>Customer Dashboard</h1>
+            <span>Manage your profile and track your coffee orders.</span>
+        </div>
+
+        <!-- Customer Profile -->
+        <section class="profile-card">
+
+            <div class="profile-icon">👤</div>
+
+            <h2 id="profile-display-name">Loading...</h2>
+            <p class="profile-subtitle">BREWVERSE Customer</p>
+
+            <div class="profile-details">
+
+                <div class="detail-row">
+                    <label>Customer ID</label>
+                    <p id="profile-id">Loading...</p>
+                </div>
+
+                <div class="detail-row">
+                    <label>Full Name</label>
+                    <p id="profile-name">Loading...</p>
+                </div>
+
+                <div class="detail-row">
+                    <label>Email Address</label>
+                    <p id="profile-email">Loading...</p>
+                </div>
+
+                <div class="detail-row">
+                    <label>Account Created</label>
+                    <p id="profile-date">Loading...</p>
+                </div>
+
+            </div>
+
+            <button type="button" id="edit-profile-btn">
+                Edit Profile
+            </button>
+
+            <button type="button" id="logout-btn" class="logout-btn">
+                Logout
+            </button>
+
+        </section>
+
+        <!-- Edit Profile -->
+        <section class="edit-profile-card" id="edit-profile-section"
+                 style="display: none;">
+
+            <h2>Edit Your Profile</h2>
+
+            <form id="profile-form">
+
+                <label for="customer-name">Full Name</label>
+                <input type="text" id="customer-name"
+                       placeholder="Enter your name" required>
+
+                <label for="customer-email">Email Address</label>
+                <input type="email" id="customer-email"
+                       placeholder="Enter your email" required>
+
+                <button type="submit">Save Changes</button>
+
+                <button type="button" id="cancel-edit-btn"
+                        class="cancel-btn">
+                    Cancel
+                </button>
+
+                <p id="profile-message"></p>
+
+            </form>
+
+        </section>
+
+        <!-- Customer Orders -->
+        <section class="customer-orders">
+
+            <div class="orders-heading">
+                <p>YOUR PURCHASES</p>
+                <h2>My Order History</h2>
+                <span>Track your previous coffee orders.</span>
+            </div>
+
+            <div id="customer-orders-list">
+                <p>Loading your orders...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 BREWVERSE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>

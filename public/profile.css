@@ -1,0 +1,440 @@
+
+/* ===============================
+   BREWVERSE CUSTOMER PROFILE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f3ee;
+    color: #3e2723;
+}
+
+/* HEADER */
+
+.profile-header {
+    background: #2b1915;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c99562;
+}
+
+.back-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: #d9a46f;
+}
+
+/* MAIN CONTAINER */
+
+.profile-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+/* PAGE HEADING */
+
+.profile-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.profile-heading p {
+    color: #a66b3f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.profile-heading h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+    color: #3e2723;
+}
+
+.profile-heading span {
+    color: #777;
+    font-size: 15px;
+}
+
+/* PROFILE CARD */
+
+.profile-card {
+    max-width: 650px;
+    margin: auto;
+    background: #ffffff;
+    padding: 35px 45px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(62, 39, 35, 0.10);
+    border-top: 5px solid #a66b3f;
+}
+
+.profile-icon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #f1e4d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+.profile-card h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.profile-subtitle {
+    color: #a66b3f;
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+/* PROFILE DETAILS */
+
+.profile-details {
+    text-align: left;
+    border-top: 1px solid #eee;
+    margin-bottom: 25px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-row label {
+    color: #888;
+    font-size: 14px;
+}
+
+.detail-row p {
+    color: #3e2723;
+    font-size: 14px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* BUTTONS */
+
+.profile-card button,
+.edit-profile-card button {
+    border: none;
+    padding: 12px 23px;
+    border-radius: 7px;
+    background: #6f4e37;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.profile-card button:hover,
+.edit-profile-card button:hover {
+    background: #3e2723;
+    transform: translateY(-2px);
+}
+
+.profile-card .logout-btn {
+    background: #ffffff;
+    color: #8b3a32;
+    border: 1px solid #8b3a32;
+}
+
+.profile-card .logout-btn:hover {
+    background: #8b3a32;
+    color: white;
+}
+
+/* EDIT PROFILE */
+
+.edit-profile-card {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.edit-profile-card h2 {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.edit-profile-card label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.edit-profile-card input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+.edit-profile-card input:focus {
+    border-color: #a66b3f;
+}
+
+.edit-profile-card .cancel-btn {
+    background: #777;
+}
+
+#profile-message {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* CUSTOMER ORDERS */
+
+.customer-orders {
+    margin-top: 65px;
+    margin-bottom: 50px;
+}
+
+.orders-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.orders-heading p {
+    color: #a66b3f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.orders-heading h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.orders-heading span {
+    color: #777;
+    font-size: 15px;
+}
+
+/* ORDER CARD */
+
+.customer-order-card {
+    max-width: 850px;
+    margin: 0 auto 22px;
+    background: white;
+    padding: 25px;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    border-left: 4px solid #a66b3f;
+}
+
+.order-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-card-header h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.order-card-header p {
+    color: #888;
+    font-size: 13px;
+}
+
+/* ORDER STATUS */
+
+.order-status {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-pending {
+    background: #fff1cc;
+    color: #9a6900;
+}
+
+.status-processing {
+    background: #dcecff;
+    color: #1557a0;
+}
+
+.status-completed {
+    background: #d9f3df;
+    color: #20733a;
+}
+
+.status-cancelled {
+    background: #ffe0e0;
+    color: #a52a2a;
+}
+
+/* ORDER PRODUCTS */
+
+.order-products {
+    padding: 18px 0;
+}
+
+.order-product {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* ORDER TOTAL */
+
+.order-card-footer {
+    border-top: 1px solid #eee;
+    padding-top: 17px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3e2723;
+}
+
+/* EMPTY ORDERS */
+
+.no-orders {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.no-orders h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.no-orders p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.no-orders a {
+    display: inline-block;
+    color: white;
+    background: #6f4e37;
+    padding: 12px 23px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.no-orders a:hover {
+    background: #3e2723;
+}
+
+.order-error {
+    text-align: center;
+    color: #a94442;
+    padding: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #2b1915;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    .profile-header {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .profile-container {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .profile-heading h1 {
+        font-size: 27px;
+    }
+
+    .profile-card {
+        padding: 25px 18px;
+    }
+
+    .detail-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .customer-order-card {
+        padding: 18px;
+    }
+
+    .order-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .orders-heading h2 {
+        font-size: 25px;
+    }
+
+    .order-product {
+        font-size: 13px;
+    }
+}

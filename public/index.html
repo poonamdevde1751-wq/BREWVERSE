@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREWVERSE | Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">BREW<span>VERSE</span></a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="auth.html">Login / Register</a>
+                <a href="profile.html">My Account</a>
+                <a href="#orders">My Orders</a>
+                <a href="admin.html" id="admin-link" style="display: none;">
+                    Admin Dashboard
+                </a>
+            </div>
+
+            <a href="#cart" class="cart-link">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="subtitle">WELCOME TO BREWVERSE</p>
+            <h1>Fresh Coffee,<br>Fresh Start.</h1>
+            <p>
+                Experience the perfect taste of freshly brewed coffee.
+                Made with love, served with passion.
+            </p>
+            <a href="#menu" class="hero-btn">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Coffee Menu -->
+    <section class="menu-section" id="menu">
+        <div class="section-heading">
+            <p>OUR SPECIAL MENU</p>
+            <h2>Explore Our Coffee</h2>
+            <span>Choose your favourite coffee and enjoy every sip.</span>
+        </div>
+
+        <div class="coffee-menu" id="coffee-menu">
+            <p>Loading coffee menu...</p>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <section class="cart-section" id="cart">
+        <div class="section-heading">
+            <p>YOUR SELECTION</p>
+            <h2>Shopping Cart</h2>
+            <span>Review your coffee before checkout.</span>
+        </div>
+
+        <div id="cart-items" class="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Total: ₹<span id="cart-total">0.00</span></h3>
+            <button id="checkout-btn" class="checkout-btn">
+                Proceed to Checkout
+            </button>
+            <p id="cart-message" class="message"></p>
+        </div>
+    </section>
+
+    <!-- My Orders -->
+    <section class="orders-section" id="orders">
+        <div class="section-heading">
+            <p>ORDER HISTORY</p>
+            <h2>My Orders</h2>
+            <span>View your previous coffee orders.</span>
+        </div>
+
+        <div id="orders-list">
+            <p>Loading your orders...</p>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800"
+                alt="Fresh Coffee">
+        </div>
+
+        <div class="about-content">
+            <p class="subtitle">ABOUT BREWVERSE</p>
+            <h2>Every Cup Has a Story</h2>
+            <p>
+                BREWVERSE is a coffee shop created for coffee lovers.
+                We serve freshly prepared coffee using quality ingredients.
+                Our goal is to make every coffee moment special.
+            </p>
+            <a href="#menu" class="hero-btn">Explore Coffee</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="section-heading">
+            <p>GET IN TOUCH</p>
+            <h2>Contact Us</h2>
+            <span>We would love to hear from you.</span>
+        </div>
+
+        <div class="contact-details">
+            <p>📍 BREWVERSE Coffee Shop</p>
+            <p>📧 brewverse@gmail.com</p>
+            <p>📞 +91 9876543210</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>BREWVERSE</h2>
+        <p>Fresh Coffee. Fresh Moments.</p>
+        <p>© 2026 BREWVERSE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
